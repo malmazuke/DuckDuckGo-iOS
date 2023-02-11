@@ -58,6 +58,8 @@ public class AppUserDefaults: AppSettings {
         
         static let currentFireButtonAnimationKey = "com.duckduckgo.app.currentFireButtonAnimationKey"
         
+        static let currentToolbarLocationKey = "com.duckduckgo.app.currentToolbarLocationKey"
+        
         static let autofillCredentialsEnabled = "com.duckduckgo.ios.autofillCredentialsEnabled"
     }
 
@@ -166,6 +168,21 @@ public class AppUserDefaults: AppSettings {
         }
         set {
             userDefaults?.setValue(newValue.rawValue, forKey: Keys.currentFireButtonAnimationKey)
+        }
+    }
+    
+    var currentToolbarLocation: ToolbarLocation {
+        get {
+            if let string = userDefaults?.string(forKey: Keys.currentToolbarLocationKey),
+               let currentToolbarLocation = ToolbarLocation(rawValue: string) {
+                
+                return currentToolbarLocation
+            } else {
+                return .top
+            }
+        }
+        set {
+            userDefaults?.setValue(newValue.rawValue, forKey: Keys.currentToolbarLocationKey)
         }
     }
     

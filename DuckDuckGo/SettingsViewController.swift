@@ -49,6 +49,8 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var versionCell: UITableViewCell!
     @IBOutlet weak var textSizeCell: UITableViewCell!
     @IBOutlet weak var textSizeAccessoryText: UILabel!
+    @IBOutlet weak var toolbarLocationCell: UITableViewCell!
+    @IBOutlet weak var toolbarLocationAccessoryText: UILabel!
     @IBOutlet weak var widgetEducationCell: UITableViewCell!
     @IBOutlet weak var autofillCell: UITableViewCell!
     @IBOutlet weak var debugCell: UITableViewCell!
@@ -92,6 +94,7 @@ class SettingsViewController: UITableViewController {
         configureThemeCellAccessory()
         configureFireButtonAnimationCellAccessory()
         configureTextSizeCell()
+        configureToolbarLocationCell()
         configureDisableAutocompleteToggle()
         configureSecurityToggles()
         configureVersionText()
@@ -108,6 +111,7 @@ class SettingsViewController: UITableViewController {
         
         configureFireButtonAnimationCellAccessory()
         configureTextSizeCell()
+        configureToolbarLocationCell()
         configureAutoClearCellAccessory()
         configureRememberLogins()
         configureDoNotSell()
@@ -164,6 +168,10 @@ class SettingsViewController: UITableViewController {
     private func configureTextSizeCell() {
         textSizeCell.isHidden = UIDevice.current.userInterfaceIdiom == .pad
         textSizeAccessoryText.text = "\(appSettings.textSize)%"
+    }
+    
+    private func configureToolbarLocationCell() {
+        toolbarLocationAccessoryText.text = appSettings.currentToolbarLocation.descriptionText
     }
 
     private func configureIconViews() {

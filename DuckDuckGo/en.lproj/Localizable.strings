@@ -1150,6 +1150,12 @@ https://duckduckgo.com/mac";
 /* Confirmation of an action - populated with a domain name */
 "toast.protection.enabled" = "Privacy Protection enabled for %@";
 
+/* Bottom toolbar location setting name */
+"toolbarLocation.bottom.name" = "Bottom";
+
+/* Top toolbar location setting name */
+"toolbarLocation.top.name" = "Top";
+
 /* Autocomplete selected suggestion into the Address Bar button accessibility label */
 "voiceover.action.suggestion.autocomplete" = "Autocomplete suggestion";
 

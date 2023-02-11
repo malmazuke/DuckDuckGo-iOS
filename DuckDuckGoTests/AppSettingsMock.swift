@@ -44,6 +44,8 @@ class AppSettingsMock: AppSettings {
     var currentFireButtonAnimation: DuckDuckGo.FireButtonAnimationType = .fireRising
 
     var textSize: Int = 14
+    
+    var currentToolbarLocation: DuckDuckGo.ToolbarLocation = .top
 
     var autofill: Bool = false
 

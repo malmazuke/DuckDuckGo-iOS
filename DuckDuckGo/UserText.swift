@@ -315,6 +315,9 @@ public struct UserText {
     public static let fireButtonAnimationAirstreamName = NSLocalizedString("fireButtonAnimation.airstream.name", value: "Airstream", comment: "")
     public static let fireButtonAnimationNoneName = NSLocalizedString("fireButtonAnimation.none.name", value: "None", comment: "")
     
+    public static let toolbarLocationTopName = NSLocalizedString("toolbarLocation.top.name", value: "Top", comment: "Top toolbar location setting name")
+    public static let toolbarLocationBottomName = NSLocalizedString("toolbarLocation.bottom.name", value: "Bottom", comment: "Bottom toolbar location setting name")
+    
     public static let webJSAlertOKButton = NSLocalizedString("webJSAlert.OK.button", value: "OK", comment: "OK button for JavaScript alerts")
     public static let webJSAlertCancelButton = NSLocalizedString("webJSAlert.cancel.button", value: "Cancel", comment: "Cancel button for JavaScript alerts")
     public static let webJSAlertWebsiteMessageFormat = NSLocalizedString("webJSAlert.website-message.format", value: "A message from %@:", comment: "Alert title explaining the message is shown by a website")

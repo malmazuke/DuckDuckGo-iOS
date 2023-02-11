@@ -498,6 +498,34 @@
                                             <segue destination="zWP-d3-nVc" kind="show" id="hNb-Q0-pqa"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="B1E-sj-qqm" detailTextLabel="97U-Ka-gyr" style="IBUITableViewCellStyleValue1" id="neR-pf-G6e" userLabel="Toolbar Location Cell">
+                                        <rect key="frame" x="0.0" y="884" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="neR-pf-G6e" id="77A-tD-9PC">
+                                            <rect key="frame" x="0.0" y="0.0" width="383.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Toolbar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B1E-sj-qqm">
+                                                    <rect key="frame" x="20" y="13.000000000000002" width="53" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Toolbar Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="97U-Ka-gyr">
+                                                    <rect key="frame" x="256.33333333333337" y="13.000000000000002" width="119.33333333333333" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                                    <color key="textColor" red="0.99999064209999999" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="3X4-EX-O5n" kind="show" id="nLi-Il-D7L"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nwi-z5-yyq" userLabel="Autocomplete Cell">
                                         <rect key="frame" x="0.0" y="856.99999618530273" width="414" height="44.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -867,6 +895,8 @@
                         <outlet property="textSizeAccessoryText" destination="EB8-09-gt2" id="DXw-t7-Fm1"/>
                         <outlet property="textSizeCell" destination="S20-Qg-xka" id="Son-JH-8EM"/>
                         <outlet property="themeAccessoryText" destination="Gbx-kl-uOO" id="h6S-um-CfT"/>
+                        <outlet property="toolbarLocationAccessoryText" destination="97U-Ka-gyr" id="kea-yS-grb"/>
+                        <outlet property="toolbarLocationCell" destination="neR-pf-G6e" id="jck-jL-uoG"/>
                         <outlet property="versionCell" destination="TYF-GX-a3j" id="KDT-RF-urU"/>
                         <outlet property="versionText" destination="d5n-vG-8kF" id="Mgc-L1-gi4"/>
                         <outlet property="voiceSearchCell" destination="TpN-Tg-MxQ" id="6Zc-xP-sxa"/>
@@ -904,6 +934,8 @@
                         <outletCollection property="labels" destination="And-cQ-SEu" collectionClass="NSMutableArray" id="gON-xQ-NAg"/>
                         <outletCollection property="labels" destination="A9G-5I-RSn" collectionClass="NSMutableArray" id="ImY-8T-hUY"/>
                         <outletCollection property="labels" destination="Swa-O7-n8W" collectionClass="NSMutableArray" id="GRg-VL-xCn"/>
+                        <outletCollection property="accessoryLabels" destination="97U-Ka-gyr" collectionClass="NSMutableArray" id="2Cf-ZB-3sh"/>
+                        <outletCollection property="labels" destination="B1E-sj-qqm" collectionClass="NSMutableArray" id="3DN-Zg-Q16"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7u-7D-pid" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2169,6 +2201,67 @@ After all, the internet shouldn’t feel so creepy, and getting the privacy you 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kav-l0-Xbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7170" y="929"/>
+        </scene>
+        <!--Toolbar Location Scene-->
+        <scene sceneID="U2d-56-oa9">
+            <objects>
+                <tableViewController id="3X4-EX-O5n" userLabel="Toolbar Location Scene" customClass="ToolbarLocationSettingsViewController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="A6A-V2-j87">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToolbarLocationCell" id="FGA-c4-G5O" customClass="ToolbarLocationCell" customModule="DuckDuckGo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FGA-c4-G5O" id="Hwf-R5-b6z">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="w7N-Ae-rbO">
+                                            <rect key="frame" x="20" y="12.666666666666666" width="374" height="18.666666666666671"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEV-K2-2Ab">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="18.666666666666668"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="w7N-Ae-rbO" firstAttribute="leading" secondItem="Hwf-R5-b6z" secondAttribute="leadingMargin" id="Hzh-Kw-JlB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="w7N-Ae-rbO" secondAttribute="trailing" id="gFt-Ss-NA8"/>
+                                        <constraint firstItem="w7N-Ae-rbO" firstAttribute="centerY" secondItem="Hwf-R5-b6z" secondAttribute="centerY" id="uAa-bq-7cR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="nameLabel" destination="tEV-K2-2Ab" id="rmz-1u-xdv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3X4-EX-O5n" id="ZTs-X0-yvK"/>
+                            <outlet property="delegate" destination="3X4-EX-O5n" id="B21-1P-O53"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Toolbar Location" id="jHM-6t-GnG">
+                        <attributedString key="userComments">
+                            <fragment content="Toolbar Location setting page title"/>
+                        </attributedString>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzo-Zr-fPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9294" y="929"/>
         </scene>
     </scenes>
     <resources>
