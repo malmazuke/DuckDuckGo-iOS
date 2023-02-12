@@ -171,6 +171,12 @@ class SettingsViewController: UITableViewController {
     }
     
     private func configureToolbarLocationCell() {
+        guard UIDevice.current.userInterfaceIdiom != .pad else {
+            toolbarLocationCell.isHidden = true
+            toolbarLocationCell.isUserInteractionEnabled = false
+            return
+        }
+        
         toolbarLocationAccessoryText.text = appSettings.currentToolbarLocation.descriptionText
     }
 

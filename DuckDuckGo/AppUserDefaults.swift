@@ -173,6 +173,10 @@ public class AppUserDefaults: AppSettings {
     
     var currentToolbarLocation: ToolbarLocation {
         get {
+            guard UIDevice.current.userInterfaceIdiom != .pad else {
+                return .top
+            }
+            
             if let string = userDefaults?.string(forKey: Keys.currentToolbarLocationKey),
                let currentToolbarLocation = ToolbarLocation(rawValue: string) {
                 
